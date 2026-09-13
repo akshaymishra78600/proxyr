@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  html,body{ height:100%; }
+
+  body{
+    font-family:'Poppins', sans-serif;
+    color:#1a1a1a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    padding:24px 16px;
+    background:#ffffff;
+  }
+
+  .card{
+    width:100%;
+    max-width:420px;
+    background:#ffffff;
+    border-radius:28px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.12);
+    padding:48px 28px 40px;
+    text-align:center;
+  }
+
+  .avatar-wrap{
+    width:180px;
+    height:180px;
+    margin:0 auto 30px;
+    border-radius:50%;
+    padding:6px;
+    background:#ffffff;
+    box-shadow:
+      0 0 0 4px #ff3b5c,
+      0 0 26px 6px rgba(255,59,92,0.45);
+  }
+
+  .avatar-wrap img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    border-radius:50%;
+  }
+
+  h1{
+    font-weight:800;
+    font-size:1.9rem;
+    letter-spacing:0.5px;
+    color:#111111;
+    text-transform:uppercase;
+    margin-bottom:26px;
+  }
+
+  .cta{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:1.15rem;
+    color:#ffffff;
+    background:linear-gradient(90deg, #ff3b5c, #7b3bff, #1e5fff);
+    padding:20px 20px;
+    border-radius:50px;
+    box-shadow:0 10px 26px rgba(123,59,255,0.35);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .cta:active{
+    transform:translateY(3px);
+    box-shadow:0 5px 14px rgba(123,59,255,0.35);
+  }
+
+  .cta svg{
+    width:22px;
+    height:22px;
+    flex-shrink:0;
+  }
+
+  @media (max-width:420px){
+    .card{ padding:38px 20px 32px; border-radius:22px; }
+    .avatar-wrap{ width:150px; height:150px; }
+    h1{ font-size:1.5rem; }
+    .cta{ font-size:1.05rem; padding:18px 16px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="avatar-wrap">
+      <!-- replace src below with your Blogspot-hosted image URL -->
+      <img src="https://your-blogspot-image-link.jpg" alt="profile">
+    </div>
+
+    <h1>Saffola</h1>
+
+    <!-- replace href below with your destination link -->
+    <a href="https://your-destination-link.com" class="cta">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21.5 2.5L2.5 10.3C1.7 10.6 1.7 11.7 2.5 12L8 14L10 20C10.3 20.8 11.4 20.8 11.7 20L21.5 2.5Z" fill="white"/>
+        <path d="M8 14L21.5 2.5L10.5 15.5" stroke="#7b3bff" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Click Here
+    </a>
+  </div>
+
+</body>
+</html>
