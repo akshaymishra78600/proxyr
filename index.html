@@ -7,27 +7,39 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
+  :root{
+    --bg:        #161b26;   /* soft navy page background */
+    --card:      #1e2534;   /* slightly lighter card */
+    --ring-gap:  #1e2534;   /* matches card so avatar gap blends in */
+    --text:      #e6e9f0;   /* soft off-white, not pure white */
+    --muted:     #9aa3b5;
+    --accent:    #ff5c7a;   /* slightly softened pink-red */
+    --violet:    #8b5cf6;
+    --blue:      #3b73f0;
+  }
+
   *{ box-sizing:border-box; margin:0; padding:0; }
 
   html,body{ height:100%; }
 
   body{
     font-family:'Poppins', sans-serif;
-    color:#1a1a1a;
+    color:var(--text);
     display:flex;
     align-items:center;
     justify-content:center;
     min-height:100vh;
     padding:24px 16px;
-    background:#ffffff;
+    background:var(--bg);
   }
 
   .card{
     width:100%;
     max-width:420px;
-    background:#ffffff;
+    background:var(--card);
     border-radius:28px;
-    box-shadow:0 10px 40px rgba(0,0,0,0.12);
+    border:1px solid rgba(255,255,255,0.05);
+    box-shadow:0 12px 40px rgba(0,0,0,0.35);
     padding:48px 28px 40px;
     text-align:center;
   }
@@ -38,10 +50,10 @@
     margin:0 auto 30px;
     border-radius:50%;
     padding:6px;
-    background:#ffffff;
+    background:var(--ring-gap);
     box-shadow:
-      0 0 0 4px #ff3b5c,
-      0 0 26px 6px rgba(255,59,92,0.45);
+      0 0 0 4px var(--accent),
+      0 0 24px 5px rgba(255,92,122,0.28);
   }
 
   .avatar-wrap img{
@@ -56,7 +68,7 @@
     font-weight:800;
     font-size:1.9rem;
     letter-spacing:0.5px;
-    color:#111111;
+    color:var(--text);
     text-transform:uppercase;
     margin-bottom:26px;
   }
@@ -70,16 +82,21 @@
     font-weight:600;
     font-size:1.15rem;
     color:#ffffff;
-    background:linear-gradient(90deg, #ff3b5c, #7b3bff, #1e5fff);
+    background:linear-gradient(90deg, var(--accent), var(--violet), var(--blue));
     padding:20px 20px;
     border-radius:50px;
-    box-shadow:0 10px 26px rgba(123,59,255,0.35);
+    box-shadow:0 10px 26px rgba(139,92,246,0.28);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
 
   .cta:active{
     transform:translateY(3px);
-    box-shadow:0 5px 14px rgba(123,59,255,0.35);
+    box-shadow:0 5px 14px rgba(139,92,246,0.28);
+  }
+
+  .cta:focus-visible{
+    outline:3px solid rgba(139,92,246,0.6);
+    outline-offset:3px;
   }
 
   .cta svg{
@@ -88,16 +105,16 @@
     flex-shrink:0;
   }
 
-  .{
+  .timer{
     margin-top:18px;
     font-weight:500;
     font-size:0.95rem;
-    color:#6b6b6b;
+    color:var(--muted);
   }
 
   .timer span{
     font-weight:700;
-    color:#7b3bff;
+    color:#a78bfa;
   }
 
   @media (max-width:420px){
@@ -122,12 +139,12 @@
     <a href="https://cvontrix.com/AZ86-AZTCUC-EYXTJ" class="cta" id="ctaBtn">
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M21.5 2.5L2.5 10.3C1.7 10.6 1.7 11.7 2.5 12L8 14L10 20C10.3 20.8 11.4 20.8 11.7 20L21.5 2.5Z" fill="white"/>
-        <path d="M8 14L21.5 2.5L10.5 15.5" stroke="#7b3bff" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8 14L21.5 2.5L10.5 15.5" stroke="#8b5cf6" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       Download Now
     </a>
 
-    <div class="timer">Redirecting in <span id="countdown">2</span> seconds...</div>
+    <div class="timer">Redirecting in <span id="countdown">3</span> seconds...</div>
   </div>
 
   <script>
