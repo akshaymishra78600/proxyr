@@ -39,7 +39,7 @@
     background:var(--card);
     border-radius:28px;
     border:1px solid rgba(255,255,255,0.05);
-    box-shadow:0 12px 40px rgba(0,0,0,0.5);
+    box-shadow:0 12px 40px rgba(0,0,0,0.35);
     padding:48px 28px 40px;
     text-align:center;
   }
@@ -47,7 +47,7 @@
   .avatar-wrap{
     width:180px;
     height:180px;
-    margin:0 auto 0px;
+    margin:0 auto 30px;
     border-radius:50%;
     padding:6px;
     background:var(--ring-gap);
@@ -85,24 +85,18 @@
     background:linear-gradient(90deg, var(--accent), var(--violet), var(--blue));
     padding:20px 20px;
     border-radius:50px;
-    box-shadow:0 10px 26px rgba(19,92,246,0.28);
+    box-shadow:0 10px 26px rgba(139,92,246,0.28);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
 
   .cta:active{
-    transform:translateY(px);
-    box-shadow:0 5px 14px rgba(19,92,246,0.28);
+    transform:translateY(3px);
+    box-shadow:0 5px 14px rgba(139,92,246,0.28);
   }
 
   .cta:focus-visible{
-    outline:px solid rgba(19,92,246,0.6);
+    outline:3px solid rgba(139,92,246,0.6);
     outline-offset:3px;
-  }
-
-  .cta svg{
-    width:22px;
-    height:22px;
-    flex-shrink:0;
   }
 
   .timer{
@@ -137,10 +131,6 @@
 
     <!-- replace href below with your destination link -->
     <a href="https://cvontrix.com/AZ86-AZTCUC-EYXTJ" class="cta" id="ctaBtn">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M21.5 2.5L2.5 10.3C1.7 10.6 1.7 11.7 2.5 12L8 14L10 20C10.3 20.8 11.4 20.8 11.7 20L21.5 2.5Z" fill="white"/>
-        <path d="M8 14L21.5 2.5L10.5 15.5" stroke="#8b5cf6" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
       Download Now
     </a>
 
